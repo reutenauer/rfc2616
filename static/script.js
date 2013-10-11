@@ -83,6 +83,12 @@ $(function() {
     tabs('#section-17');
   });
 
+  $('a.section').click(function() {
+    var anc = $(this).attr('href');
+    var tab = parseInt(anc.substr(1));
+    tabs('#section-'+tab);
+  });
+
   $('#tab-menu a').click(function() {
     var anc=$(this).attr('href');
     tabs(anc);
