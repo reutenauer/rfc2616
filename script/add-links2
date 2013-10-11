@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+rfcfile = 'static/rfc2616.html'
+rfc = File.read(rfcfile)
+
+refpattern = /^(.*?[^>])([sS]ection\s+([\d\.]*\d))(.*)$/
+
+def makenewline(start, text, link)
+  "#{start}<a class=\"section\" href=\"##{link}\">#{text}</a>"
+end
+
+out = File.open(rfcfile, 'w')
+
+rfc.each_line do |line|
+  if line =~ refpattern
+    newline = makenewline($1, $2, $3)
+    partline = $4
+    while partline =~ refpattern
+      newline += makenewline($1, $2, $3)
+      partline = $4
+    end
+    newline += partline
+
+    out.puts newline
+  else
+    out.puts line
+  end
+end
+
+out.close
