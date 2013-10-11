@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+
+rfcfile = 'static/rfc2616.html'
+rfc = File.read(rfcfile)
+
+refpattern = /^(.*?[^>])\[(\d+)\](.*)$/
+
+def makenewline(start, ref)
+  "#{start}<a class=\"ref\" href=\"#ref-#{ref}\">[#{ref}]</a>"
+end
+
+insideref = false
+
+out = File.open(rfcfile, 'w')
+
+rfc.each_line do |line|
+  if line =~ /<h2 id="17">17 References<\/h2>/
+    insideref = true
+  elsif line =~ /<h2 id="18">18 Authors' Addresses<\/h2>/
+    insideref = false
+  end
+
+  if not insideref
+    if line =~ refpattern
+      newline = makenewline($1, $2)
+      partline = $3
+      while partline =~ refpattern
+        newline += makenewline($1, $2)
+        partline = $3
+      end
+      newline += partline
+
+      out.puts newline
+    else
+      out.puts line
+    end
+  else
+    out.puts line
+  end
+end
+
+out.close
