@@ -79,10 +79,8 @@ $(function() {
     tabs('#section-'+tab);
   });
 
-  $('a.internal').click(function() {
-    var anc = $(this).attr('href');
-    if(/^\#ref-\d+$/.test(anc))
-      tabs('#section-17');
+  $('a.ref').click(function() {
+    tabs('#section-17');
   });
 
   $('#tab-menu a').click(function() {
