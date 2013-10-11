@@ -79,6 +79,12 @@ $(function() {
     tabs('#section-'+tab);
   });
 
+  $('a.internal').click(function() {
+    var anc = $(this).attr('href');
+    if(/^\#ref-\d+$/.test(anc))
+      tabs('#section-17');
+  });
+
   $('#tab-menu a').click(function() {
     var anc=$(this).attr('href');
     tabs(anc);
@@ -87,8 +93,15 @@ $(function() {
   var CurrentURL = document.location.href;
   if(CurrentURL) {
     var Anchor = getAnchor(CurrentURL);
-    if(Anchor)
-      tabs('#'+Anchor);
+    if(Anchor) {
+      if(/^ref-\d+$/.test(Anchor)) {
+        console.log("Tabbing to #section-17");
+        tabs('#section-17');
+      } else {
+        console.log("Tabbing to #" + Anchor);
+        tabs('#'+Anchor);
+      }
+    }
     else
       tabs('#section-0');
   } else
