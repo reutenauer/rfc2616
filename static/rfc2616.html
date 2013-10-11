@@ -55,8 +55,8 @@
 							<h3>Copyright Notice</h3>
 							<p>Copyright (C) The Internet Society (1999).  All Rights Reserved.</p>
 							<h3>Abstract</h3>
-							<p>The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems. It is a generic, stateless, protocol which can be used for many tasks beyond its use for hypertext, such as name servers and distributed object management systems, through extension of its request methods, error codes and headers [47]. A feature of HTTP is the typing and negotiation of data representation, allowing systems to be built independently of the data being transferred.</p>
-							<p>HTTP has been in use by the World-Wide Web global information initiative since 1990. This specification defines the protocol referred to as "HTTP/1.1", and is an update to RFC 2068 [33].</p>
+							<p>The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems. It is a generic, stateless, protocol which can be used for many tasks beyond its use for hypertext, such as name servers and distributed object management systems, through extension of its request methods, error codes and headers <a class="ref" href="#ref-47">[47]</a>. A feature of HTTP is the typing and negotiation of data representation, allowing systems to be built independently of the data being transferred.</p>
+							<p>HTTP has been in use by the World-Wide Web global information initiative since 1990. This specification defines the protocol referred to as "HTTP/1.1", and is an update to RFC 2068 <a class="ref" href="#ref-33">[33]</a>.</p>
 						</div>
 						<div id="contents" class="section">
 								<h2>Contents</h2>
@@ -322,11 +322,11 @@
 					<div id="section-1" class="section">
 <h2 id="1">1 Introduction</h2>
 <h3 id="1.1">1.1 Purpose</h3>
-<p>The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems. HTTP has been in use by the World-Wide Web global information initiative since 1990. The first version of HTTP, referred to as HTTP/0.9, was a simple protocol for raw data transfer across the Internet. HTTP/1.0, as defined by RFC 1945 [6], improved the protocol by allowing messages to be in the format of MIME-like messages, containing metainformation about the data transferred and modifiers on the request/response semantics. However, HTTP/1.0 does not sufficiently take into consideration the effects of hierarchical proxies, caching, the need for persistent connections, or virtual hosts. In addition, the proliferation of incompletely-implemented applications calling themselves "HTTP/1.0" has necessitated a protocol version change in order for two communicating applications to determine each other's true capabilities.</p>
+<p>The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems. HTTP has been in use by the World-Wide Web global information initiative since 1990. The first version of HTTP, referred to as HTTP/0.9, was a simple protocol for raw data transfer across the Internet. HTTP/1.0, as defined by RFC 1945 <a class="ref" href="#ref-6">[6]</a>, improved the protocol by allowing messages to be in the format of MIME-like messages, containing metainformation about the data transferred and modifiers on the request/response semantics. However, HTTP/1.0 does not sufficiently take into consideration the effects of hierarchical proxies, caching, the need for persistent connections, or virtual hosts. In addition, the proliferation of incompletely-implemented applications calling themselves "HTTP/1.0" has necessitated a protocol version change in order for two communicating applications to determine each other's true capabilities.</p>
 <p>This specification defines the protocol referred to as "HTTP/1.1".</p>
 <p>This protocol includes more stringent requirements than HTTP/1.0 in order to ensure reliable implementation of its features.</p>
-<p>Practical information systems require more functionality than simple retrieval, including search, front-end update, and annotation. HTTP allows an open-ended set of methods and headers that indicate the purpose of a request [47]. It builds on the discipline of reference provided by the Uniform Resource Identifier (URI) <a class="ref" href="#ref-3">[3]</a>, as a location (URL) [4] or name (URN) [20], for indicating the resource to which a method is to be applied. Messages are passed in a format similar to that used by Internet mail [9] as defined by the Multipurpose Internet Mail Extensions (MIME) [7].</p>
-<p>HTTP is also used as a generic protocol for communication between user agents and proxies/gateways to other Internet systems, including those supported by the SMTP [16], NNTP [13], FTP [18], Gopher <a class="ref" href="#ref-2">[2]</a>, and WAIS [10] protocols. In this way, HTTP allows basic hypermedia access to resources available from diverse applications.</p>
+<p>Practical information systems require more functionality than simple retrieval, including search, front-end update, and annotation. HTTP allows an open-ended set of methods and headers that indicate the purpose of a request <a class="ref" href="#ref-47">[47]</a>. It builds on the discipline of reference provided by the Uniform Resource Identifier (URI) <a class="ref" href="#ref-3">[3]</a>, as a location (URL) <a class="ref" href="#ref-4">[4]</a> or name (URN) <a class="ref" href="#ref-20">[20]</a>, for indicating the resource to which a method is to be applied. Messages are passed in a format similar to that used by Internet mail <a class="ref" href="#ref-9">[9]</a> as defined by the Multipurpose Internet Mail Extensions (MIME) <a class="ref" href="#ref-7">[7]</a>.</p>
+<p>HTTP is also used as a generic protocol for communication between user agents and proxies/gateways to other Internet systems, including those supported by the SMTP <a class="ref" href="#ref-16">[16]</a>, NNTP <a class="ref" href="#ref-13">[13]</a>, FTP <a class="ref" href="#ref-18">[18]</a>, Gopher <a class="ref" href="#ref-2">[2]</a>, and WAIS <a class="ref" href="#ref-10">[10]</a> protocols. In this way, HTTP allows basic hypermedia access to resources available from diverse applications.</p>
 
 <h3 id="1.2">1.2 Requirements</h3>
 <p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 [34].</p>
@@ -8368,101 +8368,101 @@ the orginal document -->
        1630, June 1994.
    </p>
 
-   <p>
+   <p id="ref-4">
    [4] Berners-Lee, T., Masinter, L. and M. McCahill, "Uniform Resource
        Locators (URL)", RFC 1738, December 1994.
    </p>
 
-   <p>
+   <p id="ref-5">
    [5] Berners-Lee, T. and D. Connolly, "Hypertext Markup Language -
        2.0", RFC 1866, November 1995.
    </p>
 
-   <p>
+   <p id="ref-6">
    [6] Berners-Lee, T., Fielding, R. and H. Frystyk, "Hypertext Transfer
        Protocol -- HTTP/1.0", RFC 1945, May 1996.
    </p>
 
-   <p>
+   <p id="ref-7">
    [7] Freed, N. and N. Borenstein, "Multipurpose Internet Mail
        Extensions (MIME) Part One: Format of Internet Message Bodies",
        RFC 2045, November 1996.
    </p>
 
-   <p>
+   <p id="ref-8">
    [8] Braden, R., "Requirements for Internet Hosts -- Communication
        Layers", STD 3, RFC 1123, October 1989.
    </p>
 
-   <p>
+   <p id="ref-9">
    [9] Crocker, D., "Standard for The Format of ARPA Internet Text
        Messages", STD 11, RFC 822, August 1982.
    </p>
 
-   <p>
+   <p id="ref-10">
    [10] Davis, F., Kahle, B., Morris, H., Salem, J., Shen, T., Wang, R.,
         Sui, J., and M. Grinbaum, "WAIS Interface Protocol Prototype
         Functional Specification," (v1.5), Thinking Machines
         Corporation, April 1990.
    </p>
 
-   <p>
+   <p id="ref-11">
    [11] Fielding, R., "Relative Uniform Resource Locators", RFC 1808,
         June 1995.
    </p>
 
-   <p>
+   <p id="ref-12">
    [12] Horton, M. and R. Adams, "Standard for Interchange of USENET
         Messages", RFC 1036, December 1987.
    </p>
 
-   <p>
+   <p id="ref-13">
    [13] Kantor, B. and P. Lapsley, "Network News Transfer Protocol", RFC
         977, February 1986.
    </p>
 
-   <p>
+   <p id="ref-14">
    [14] Moore, K., "MIME (Multipurpose Internet Mail Extensions) Part
         Three: Message Header Extensions for Non-ASCII Text", RFC 2047,
         November 1996.
    </p>
 
-   <p>
+   <p id="ref-15">
    [15] Nebel, E. and L. Masinter, "Form-based File Upload in HTML", RFC
         1867, November 1995.
    </p>
 
-   <p>
+   <p id="ref-16">
    [16] Postel, J., "Simple Mail Transfer Protocol", STD 10, RFC 821,
         August 1982.
    </p>
 
-   <p>
+   <p id="ref-17">
    [17] Postel, J., "Media Type Registration Procedure", RFC 1590,
         November 1996.
    </p>
 
-   <p>
+   <p id="ref-18">
    [18] Postel, J. and J. Reynolds, "File Transfer Protocol", STD 9, RFC
         959, October 1985.
    </p>
 
-   <p>
+   <p id="ref-19">
    [19] Reynolds, J. and J. Postel, "Assigned Numbers", STD 2, RFC 1700,
         October 1994.
    </p>
 
-   <p>
+   <p id="ref-20">
    [20] Sollins, K. and L. Masinter, "Functional Requirements for
         Uniform Resource Names", RFC 1737, December 1994.
    </p>
 
-   <p>
+   <p id="ref-21">
    [21] US-ASCII. Coded Character Set - 7-Bit American Standard Code for
         Information Interchange. Standard ANSI X3.4-1986, ANSI, 1986.
    </p>
 
-   <p>
+   <p id="ref-22">
    [22] ISO-8859. International Standard -- Information Processing --
         8-bit Single-Byte Coded Graphic Character Sets --
         Part 1: Latin alphabet No. 1, ISO-8859-1:1987.
@@ -8476,22 +8476,22 @@ the orginal document -->
         Part 9: Latin alphabet No. 5, ISO-8859-9, 1990.
    </p>
 
-   <p>
+   <p id="ref-23">
    [23] Meyers, J. and M. Rose, "The Content-MD5 Header Field", RFC
         1864, October 1995.
    </p>
 
-   <p>
+   <p id="ref-24">
    [24] Carpenter, B. and Y. Rekhter, "Renumbering Needs Work", RFC
         1900, February 1996.
    </p>
 
-   <p>
+   <p id="ref-25">
    [25] Deutsch, P., "GZIP file format specification version 4.3", RFC
         1952, May 1996.
    </p>
 
-   <p>
+   <p id="ref-26">
    [26] Venkata N. Padmanabhan, and Jeffrey C. Mogul. "Improving HTTP
         Latency", Computer Networks and ISDN Systems, v. 28, pp. 25-35,
         Dec. 1995. Slightly revised version of paper in Proc. 2nd
@@ -8501,132 +8501,132 @@ the orginal document -->
         ency.html.
    </p>
 
-   <p>
+   <p id="ref-27">
    [27] Joe Touch, John Heidemann, and Katia Obraczka. "Analysis of HTTP
         Performance", &lt;URL: http://www.isi.edu/touch/pubs/http-perf96/&gt;,
         ISI Research Report ISI/RR-98-463, (original report dated Aug.
         1996), USC/Information Sciences Institute, August 1998.
    </p>
 
-   <p>
+   <p id="ref-28">
    [28] Mills, D., "Network Time Protocol (Version 3) Specification,
         Implementation and Analysis", RFC 1305, March 1992.
    </p>
 
-   <p>
+   <p id="ref-29">
    [29] Deutsch, P., "DEFLATE Compressed Data Format Specification
         version 1.3", RFC 1951, May 1996.
    </p>
 
-   <p>
+   <p id="ref-30">
    [30] S. Spero, "Analysis of HTTP Performance Problems,"
         http://sunsite.unc.edu/mdma-release/http-prob.html.
    </p>
 
-   <p>
+   <p id="ref-31">
    [31] Deutsch, P. and J. Gailly, "ZLIB Compressed Data Format
         Specification version 3.3", RFC 1950, May 1996.
    </p>
 
-   <p>
+   <p id="ref-32">
    [32] Franks, J., Hallam-Baker, P., Hostetler, J., Leach, P.,
         Luotonen, A., Sink, E. and L. Stewart, "An Extension to HTTP:
         Digest Access Authentication", RFC 2069, January 1997.
    </p>
 
-   <p>
+   <p id="ref-33">
    [33] Fielding, R., Gettys, J., Mogul, J., Frystyk, H. and T.
         Berners-Lee, "Hypertext Transfer Protocol -- HTTP/1.1", RFC
         2068, January 1997.
    </p>
 
-   <p>
+   <p id="ref-34">
    [34] Bradner, S., "Key words for use in RFCs to Indicate Requirement
         Levels", BCP 14, RFC 2119, March 1997.
    </p>
 
-   <p>
+   <p id="ref-35">
    [35] Troost, R. and Dorner, S., "Communicating Presentation
         Information in Internet Messages: The Content-Disposition
         Header", RFC 1806, June 1995.
    </p>
 
-   <p>
+   <p id="ref-36">
    [36] Mogul, J., Fielding, R., Gettys, J. and H. Frystyk, "Use and
         Interpretation of HTTP Version Numbers", RFC 2145, May 1997.
         [jg639]
    </p>
 
-   <p>
+   <p id="ref-37">
    [37] Palme, J., "Common Internet Message Headers", RFC 2076, February
         1997. [jg640]
    </p>
 
-   <p>
+   <p id="ref-38">
    [38] Yergeau, F., "UTF-8, a transformation format of Unicode and
         ISO-10646", RFC 2279, January 1998. [jg641]
 
    </p>
 
-   <p>
+   <p id="ref-39">
    [39] Nielsen, H.F., Gettys, J., Baird-Smith, A., Prud'hommeaux, E.,
         Lie, H., and C. Lilley. "Network Performance Effects of
         HTTP/1.1, CSS1, and PNG," Proceedings of ACM SIGCOMM '97, Cannes
         France, September 1997.[jg642]
    </p>
 
-   <p>
+   <p id="ref-40">
    [40] Freed, N. and N. Borenstein, "Multipurpose Internet Mail
         Extensions (MIME) Part Two: Media Types", RFC 2046, November
         1996. [jg643]
    </p>
 
-   <p>
+   <p id="ref-41">
    [41] Alvestrand, H., "IETF Policy on Character Sets and Languages",
         BCP 18, RFC 2277, January 1998. [jg644]
    </p>
 
-   <p>
+   <p id="ref-42">
    [42] Berners-Lee, T., Fielding, R. and L. Masinter, "Uniform Resource
         Identifiers (URI): Generic Syntax and Semantics", RFC 2396,
         August 1998. [jg645]
    </p>
 
-   <p>
+   <p id="ref-43">
    [43] Franks, J., Hallam-Baker, P., Hostetler, J., Lawrence, S.,
         Leach, P., Luotonen, A., Sink, E. and L. Stewart, "HTTP
         Authentication: Basic and Digest Access Authentication", RFC
         2617, June 1999. [jg646]
    </p>
 
-   <p>
+   <p id="ref-44">
    [44] Luotonen, A., "Tunneling TCP based protocols through Web proxy
         servers," Work in Progress. [jg647]
    </p>
 
-   <p>
+   <p id="ref-45">
    [45] Palme, J. and A. Hopmann, "MIME E-mail Encapsulation of
         Aggregate Documents, such as HTML (MHTML)", RFC 2110, March
         1997.
    </p>
 
-   <p>
+   <p id="ref-46">
    [46] Bradner, S., "The Internet Standards Process -- Revision 3", BCP
         9, RFC 2026, October 1996.
    </p>
 
-   <p>
+   <p id="ref-47">
    [47] Masinter, L., "Hyper Text Coffee Pot Control Protocol
         (HTCPCP/1.0)", RFC 2324, 1 April 1998.
    </p>
 
-   <p>
+   <p id="ref-48">
    [48] Freed, N. and N. Borenstein, "Multipurpose Internet Mail
         Extensions (MIME) Part Five: Conformance Criteria and Examples",
         RFC 2049, November 1996.
    </p>
 
-   <p>
+   <p id="ref-49">
    [49] Troost, R., Dorner, S. and K. Moore, "Communicating Presentation
         Information in Internet Messages: The Content-Disposition Header
         Field", RFC 2183, August 1997.

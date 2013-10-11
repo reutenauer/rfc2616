@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+htmlfilename = 'static/rfc2616.html'
+org = File.read(htmlfilename)
+
+refchap = false
+refpar = false
+refnum = 0
+
+html = File.open(htmlfilename, 'w')
+
+org.each_line do |line|
+  if line =~ /<h2 id="17">17 References<\/h2>/
+    refchap = true
+  elsif line =~ /<h2 id="18">18 Authors' Addresses<\/h2>/
+    refchap = false
+  end
+
+  if refchap
+    if line =~ /<p/
+      refnum += 1
+      html.puts "   <p id=\"ref-#{refnum}\">"
+    else
+      html.puts line
+    end
+  else
+    html.puts line
+  end
+end
+
+html.close
