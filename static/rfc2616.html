@@ -680,7 +680,7 @@ subtype    = token
 
 <h4 id="3.7.2">3.7.2 Multipart Types</h4>
 <p>MIME provides for a number of "multipart" types -- encapsulations of one or more entities within a single message-body. All multipart types share a common syntax, as defined in <a class="section" href="#5.1.1">section 5.1.1</a> of RFC 2046 <a class="ref" href="#ref-40">[40]</a>, and MUST include a boundary parameter as part of the media type value. The message body is itself a protocol element and MUST therefore use only CRLF to represent line breaks between body-parts. Unlike in RFC 2046, the epilogue of any multipart message MUST be empty; HTTP applications MUST NOT transmit the epilogue (even if the original multipart contains an epilogue). These restrictions exist in order to preserve the self-delimiting nature of a multipart message- body, wherein the "end" of the message-body is indicated by the ending multipart boundary.</p>
-<p>In general, HTTP treats a multipart message-body no differently than any other media type: strictly as payload. The one exception is the "multipart/byteranges" type (appendix 19.2) when it appears in a 206 (Partial Content) response, which will be interpreted by some HTTP caching mechanisms as described in sections 13.5.4 and 14.16. In all other cases, an HTTP user agent SHOULD follow the same or similar behavior as a MIME user agent would upon receipt of a multipart type. The MIME header fields within each body-part of a multipart message- body do not have any significance to HTTP beyond that defined by their MIME semantics.</p>
+<p>In general, HTTP treats a multipart message-body no differently than any other media type: strictly as payload. The one exception is the "multipart/byteranges" type (appendix 19.2) when it appears in a 206 (Partial Content) response, which will be interpreted by some HTTP caching mechanisms as described in sections <a class="section" href="#13.5.4">13.5.4</a> and <a class="section" href="#14.16">14.16</a>. In all other cases, an HTTP user agent SHOULD follow the same or similar behavior as a MIME user agent would upon receipt of a multipart type. The MIME header fields within each body-part of a multipart message- body do not have any significance to HTTP beyond that defined by their MIME semantics.</p>
 <p>In general, an HTTP user agent SHOULD follow the same or similar behavior as a MIME user agent would upon receipt of a multipart type. If an application receives an unrecognized multipart subtype, the application MUST treat it as being equivalent to "multipart/mixed".</p>
 <p class="note">Note: The "multipart/form-data" type has been specifically defined for carrying form data suitable for processing via the POST request method, as described in RFC 1867 <a class="ref" href="#ref-15">[15]</a>.</p>
 
@@ -2967,7 +2967,7 @@ the orginal document -->
    <p>
    A correct cache MUST respond to a request with the most up-to-date
    response held by the cache that is appropriate to the request (see
-   sections 13.2.5, 13.2.6, and 13.12) which meets one of the following
+   sections <a class="section" href="#13.2.5">13.2.5</a>, <a class="section" href="#13.2.6">13.2.6</a>, and <a class="section" href="#13.12">13.12</a>) which meets one of the following
    conditions:
    </p>
 
@@ -3620,7 +3620,7 @@ the orginal document -->
 
    <p>
    Entity Tags are described in <a class="section" href="#3.11">section 3.11</a>. The headers used with
-   entity tags are described in sections 14.19, 14.24, 14.26 and 14.44.
+   entity tags are described in sections <a class="section" href="#14.19">14.19</a>, <a class="section" href="#14.24">14.24</a>, <a class="section" href="#14.26">14.26</a> and <a class="section" href="#14.44">14.44</a>.
    </p>
 
 <h4 id="13.3.3">13.3.3 Weak and Strong Validators</h4>
@@ -4501,7 +4501,7 @@ the orginal document -->
 
 <h3 id="13.12">13.12 Cache Replacement</h3>
    <p>
-   If a new cacheable (see sections 14.9.2, 13.2.5, 13.2.6 and 13.8)
+   If a new cacheable (see sections <a class="section" href="#14.9.2">14.9.2</a>, <a class="section" href="#13.2.5">13.2.5</a>, <a class="section" href="#13.2.6">13.2.6</a> and <a class="section" href="#13.8">13.8</a>)
    response is received from a resource while any existing responses for
    the same resource are cached, the cache SHOULD use the new response
    to reply to the current request. It MAY insert it into cache storage
@@ -6273,7 +6273,7 @@ the orginal document -->
    <p>
    The ETag response-header field provides the current value of the
    entity tag for the requested variant. The headers used with entity
-   tags are described in sections 14.24, 14.26 and 14.44. The entity tag
+   tags are described in sections <a class="section" href="#14.24">14.24</a>, <a class="section" href="#14.26">14.26</a> and <a class="section" href="#14.44">14.44</a>. The entity tag
    MAY be used for comparison with other entities from the same resource
    (see <a class="section" href="#13.3.3">section 13.3.3</a>).
    </p>
@@ -6499,7 +6499,7 @@ the orginal document -->
    </p>
 
    <p>
-   See sections 5.2 and 19.6.1.1 for other requirements relating to
+   See sections <a class="section" href="#5.2">5.2</a> and <a class="section" href="#19.6.1.1">19.6.1.1</a> for other requirements relating to
    Host.
    </p>
 
@@ -9285,7 +9285,7 @@ the orginal document -->
    required fixing exactly when chunked encoding is used (to allow for
    transfer encoding that may not be self delimiting); it was important
    to straighten out exactly how message lengths are computed. (Sections
-   3.6, 4.4, 7.2.2, 13.5.2, 14.13, 14.16)
+   <a class="section" href="#3.6">3.6</a>, <a class="section" href="#4.4">4.4</a>, <a class="section" href="#7.2.2">7.2.2</a>, <a class="section" href="#13.5.2">13.5.2</a>, <a class="section" href="#14.13">14.13</a>, <a class="section" href="#14.16">14.16</a>)
    </p>
 
    <p>
@@ -9312,8 +9312,8 @@ the orginal document -->
 
    <p>
    A case was missed in the Cache-Control model of HTTP/1.1; s-maxage
-   was introduced to add this missing case. (Sections 13.4, 14.8, 14.9,
-   14.9.3)
+   was introduced to add this missing case. (Sections <a class="section" href="#13.4">13.4</a>, <a class="section" href="#14.8">14.8</a>, <a class="section" href="#14.9">14.9</a>,
+   <a class="section" href="#14.9.3">14.9.3</a>)
    </p>
 
    <p>
@@ -9392,8 +9392,8 @@ the orginal document -->
 
    <p>
    This change adds the Expect header and 417 status code. The message
-   transmission requirements fixes are in sections 8.2, 10.4.18,
-   8.1.2.2, 13.11, and 14.20.
+   transmission requirements fixes are in sections <a class="section" href="#8.2">8.2</a>, <a class="section" href="#10.4.18">10.4.18</a>,
+   <a class="section" href="#8.1.2.2">8.1.2.2</a>, <a class="section" href="#13.11">13.11</a>, and <a class="section" href="#14.20">14.20</a>.
    </p>
 
    <p>
