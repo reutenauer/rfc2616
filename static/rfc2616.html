@@ -1004,8 +1004,8 @@ extension-header = message-header
 
 <h4 id="7.2.1">7.2.1 Type</h4>
 <p>When an entity-body is included with a message, the data type of that
-   body is determined via the header fields Content-Type and Content-
-   Encoding. These define a two-layer, ordered encoding model:
+   body is determined via the header fields Content-Type and Content-Encoding.
+   These define a two-layer, ordered encoding model:
 
        <pre>
        entity-body := Content-Encoding( Content-Type( data ) )
@@ -1323,8 +1323,8 @@ extension-header = message-header
 
    <p>
    Because of the presence of older implementations, the protocol allows
-   ambiguous situations in which a client may send "Expect: 100-
-   continue" without receiving either a 417 (Expectation Failed) status
+   ambiguous situations in which a client may send "Expect: 100-continue"
+   without receiving either a 417 (Expectation Failed) status
    or a 100 (Continue) status. Therefore, when a client sends this
    header field to an origin server (possibly via a proxy) from which it
    has never seen a 100 (Continue) status, the client SHOULD NOT wait
@@ -1357,12 +1357,12 @@ extension-header = message-header
         (or earlier) client. There is an exception to this rule: for
         compatibility with RFC 2068, a server MAY send a 100 (Continue)
         status in response to an HTTP/1.1 PUT or POST request that does
-        not include an Expect request-header field with the "100-
-        continue" expectation. This exception, the purpose of which is
+        not include an Expect request-header field with the "100-continue"
+        expectation. This exception, the purpose of which is
         to minimize any client processing delays associated with an
         undeclared wait for 100 (Continue) status, applies only to
-        HTTP/1.1 requests, and not to requests with any other HTTP-
-        version value.
+        HTTP/1.1 requests, and not to requests with any other HTTP-version
+        value.
         </li>
 
         <li>
@@ -1400,8 +1400,8 @@ extension-header = message-header
    <p>
       <ul>
          <li>
-        If a proxy receives a request that includes an Expect request-
-        header field with the "100-continue" expectation, and the proxy
+        If a proxy receives a request that includes an Expect request-header
+        field with the "100-continue" expectation, and the proxy
         either knows that the next-hop server complies with HTTP/1.1 or
         higher, or does not know the HTTP version of the next-hop
         server, it MUST forward the request, including the Expect header
@@ -1452,8 +1452,8 @@ extension-header = message-header
          <li>
          Initialize a variable R to the estimated round-trip time to the
          server (e.g., based on the time it took to establish the
-         connection), or to a constant value of 5 seconds if the round-
-         trip time is not available.
+         connection), or to a constant value of 5 seconds if the round-trip
+         time is not available.
          </li>
 
          <li>
@@ -1548,8 +1548,8 @@ extension-header = message-header
    TRACE SHOULD NOT have side effects, and so are inherently idempotent.
    <!-- FIXME questionable if same paragraph; there is a page break in
 the orginal document -->
-   However, it is possible that a sequence of several requests is non-
-   idempotent, even if all of the methods executed in that sequence are
+   However, it is possible that a sequence of several requests is non-idempotent,
+   even if all of the methods executed in that sequence are
    idempotent. (A sequence is idempotent if a single execution of the
    entire sequence always yields a result that is not changed by a
    reexecution of all, or part, of that sequence.) For example, a
@@ -1849,8 +1849,8 @@ the orginal document -->
 
 <h3 id="9.8">9.8 TRACE</h3>
    <p>
-   The TRACE method is used to invoke a remote, application-layer loop-
-   back of the request message. The final recipient of the request
+   The TRACE method is used to invoke a remote, application-layer loop-back
+   of the request message. The final recipient of the request
    SHOULD reflect the message received back to the client as the
    entity-body of a 200 (OK) response. The final recipient is either the
    origin server or the first proxy or gateway to receive a Max-Forwards
@@ -2140,8 +2140,8 @@ the orginal document -->
 <h4 id="10.3.1">10.3.1 300 Multiple Choices</h4>
    <p>
    The requested resource corresponds to any one of a set of
-   representations, each with its own specific location, and agent-
-   driven negotiation information (<a class="section" href="#12">section 12</a>) is being provided so that
+   representations, each with its own specific location, and agent-driven
+   negotiation information (<a class="section" href="#12">section 12</a>) is being provided so that
    the user (or user agent) can select a preferred representation and
    redirect its request to that location.
    </p>
@@ -2150,8 +2150,8 @@ the orginal document -->
    Unless it was a HEAD request, the response SHOULD include an entity
    containing a list of resource characteristics and location(s) from
    which the user or user agent can choose the one most appropriate. The
-   entity format is specified by the media type given in the Content-
-   Type header field. Depending upon the format and the capabilities of
+   entity format is specified by the media type given in the Content-Type
+   header field. Depending upon the format and the capabilities of
    the user agent, selection of the most appropriate choice MAY be
    performed automatically. However, this specification does not define
    any standard for such automatic selection.
@@ -2536,8 +2536,8 @@ the orginal document -->
 
 <h4 id="10.4.12">10.4.12 411 Length Required</h4>
    <p>
-   The server refuses to accept the request without a defined Content-
-   Length. The client MAY repeat the request if it adds a valid
+   The server refuses to accept the request without a defined Content-Length.
+   The client MAY repeat the request if it adds a valid
    Content-Length header field containing the length of the message-body
    in the request message.
    </p>
@@ -2560,8 +2560,8 @@ the orginal document -->
    </p>
 
    <p>
-   If the condition is temporary, the server SHOULD include a Retry-
-   After header field to indicate that it is temporary and after what
+   If the condition is temporary, the server SHOULD include a Retry-After
+   header field to indicate that it is temporary and after what
    time the client MAY try again.
    </p>
 
@@ -2590,8 +2590,8 @@ the orginal document -->
    included a Range request-header field (<a class="section" href="#14.35">section 14.35</a>), and none of
    the range-specifier values in this field overlap the current extent
    of the selected resource, and the request did not include an If-Range
-   request-header field. (For byte-ranges, this means that the first-
-   byte-pos of all of the byte-range-spec values were greater than the
+   request-header field. (For byte-ranges, this means that the first-byte-pos
+   of all of the byte-range-spec values were greater than the
    current length of the selected resource.)
    </p>
 
@@ -2599,8 +2599,7 @@ the orginal document -->
    When this status code is returned for a byte-range request, the
    response SHOULD include a Content-Range entity-header field
    specifying the current length of the selected resource (see section
-   14.16). This response MUST NOT use the multipart/byteranges content-
-   type.
+   14.16). This response MUST NOT use the multipart/byteranges content-type.
    </p>
 
 <h4 id="10.4.18">10.4.18 417 Expectation Failed</h4>
@@ -2795,9 +2794,9 @@ the orginal document -->
    <p>
    HTTP/1.1 includes the following request-header fields for enabling
    server-driven negotiation through description of user agent
-   capabilities and user preferences: Accept (<a class="section" href="#14.1">section 14.1</a>), Accept-
-   Charset (<a class="section" href="#14.2">section 14.2</a>), Accept-Encoding (<a class="section" href="#14.3">section 14.3</a>), Accept-
-   Language (<a class="section" href="#14.4">section 14.4</a>), and User-Agent (<a class="section" href="#14.43">section 14.43</a>). However, an
+   capabilities and user preferences: Accept (<a class="section" href="#14.1">section 14.1</a>), Accept-Charset
+   (<a class="section" href="#14.2">section 14.2</a>), Accept-Encoding (<a class="section" href="#14.3">section 14.3</a>), Accept-Language
+   (<a class="section" href="#14.4">section 14.4</a>), and User-Agent (<a class="section" href="#14.43">section 14.43</a>). However, an
    origin server is not limited to these dimensions and MAY vary the
    response based on any aspect of the request, including information
    outside the request-header fields or within extension header fields
@@ -2806,8 +2805,8 @@ the orginal document -->
 
    <p>
    The Vary  header field can be used to express the parameters the
-   server uses to select a representation that is subject to server-
-   driven negotiation. See <a class="section" href="#13.6">section 13.6</a> for use of the Vary header field
+   server uses to select a representation that is subject to server-driven
+   negotiation. See <a class="section" href="#13.6">section 13.6</a> for use of the Vary header field
    by caches and <a class="section" href="#14.44">section 14.44</a> for use of the Vary header field by
    servers.
    </p>
@@ -2856,8 +2855,8 @@ the orginal document -->
    agent-driven negotiation. When a cache is supplied with a form of the
    list of available representations of the response (as in agent-driven
    negotiation) and the dimensions of variance are completely understood
-   by the cache, then the cache becomes capable of performing server-
-   driven negotiation on behalf of the origin server for subsequent
+   by the cache, then the cache becomes capable of performing server-driven
+   negotiation on behalf of the origin server for subsequent
    requests on that resource.
    </p>
 
@@ -3126,8 +3125,8 @@ the orginal document -->
    Many user agents make it possible for users to override the basic
    caching mechanisms. For example, the user agent might allow the user
    to specify that cached entities (even explicitly stale ones) are
-   never validated. Or the user agent might habitually add "Cache-
-   Control: max-stale=3600" to every request. The user agent SHOULD NOT
+   never validated. Or the user agent might habitually add "Cache-Control:
+   max-stale=3600" to every request. The user agent SHOULD NOT
    default to either non-transparent behavior, or behavior that results
    in abnormally ineffective caching, but MAY be explicitly configured
    to do so by an explicit action of the user.
@@ -3238,8 +3237,8 @@ the orginal document -->
 
    <p>
    If an origin server wishes to force any HTTP/1.1 cache, no matter how
-   it is configured, to validate every request, it SHOULD use the "must-
-   revalidate" cache-control directive (see <a class="section" href="#14.9">section 14.9</a>).
+   it is configured, to validate every request, it SHOULD use the "must-revalidate"
+   cache-control directive (see <a class="section" href="#14.9">section 14.9</a>).
 
    </p>
 
@@ -3338,8 +3337,8 @@ the orginal document -->
        <pre>corrected_received_age = max(now - date_value, age_value)</pre>
 
    <p>
-   and as long as we have either nearly synchronized clocks or all-
-   HTTP/1.1 paths, one gets a reliable (conservative) result.
+   and as long as we have either nearly synchronized clocks or all-HTTP/1.1
+   paths, one gets a reliable (conservative) result.
    </p>
 
    <p>
@@ -3456,8 +3455,8 @@ the orginal document -->
    </p>
 
    <p>
-   If none of Expires, Cache-Control: max-age, or Cache-Control: s-
-   maxage (see <a class="section" href="#14.9.3">section 14.9.3</a>) appears in the response, and the response
+   If none of Expires, Cache-Control: max-age, or Cache-Control: s-maxage
+   (see <a class="section" href="#14.9.3">section 14.9.3</a>) appears in the response, and the response
    does not include other restrictions on caching, the cache MAY compute
    a freshness lifetime using a heuristic. The cache MUST attach Warning
    113 to any response whose age is more than 24 hours if such warning
@@ -3588,8 +3587,8 @@ the orginal document -->
    </p>
 
    <p>
-   The protocol includes both positive and negative senses of cache-
-   validating conditions. That is, it is possible to request either that
+   The protocol includes both positive and negative senses of cache-validating
+   conditions. That is, it is possible to request either that
    a method be performed if and only if a validator matches or if and
    only if no validators match.
 
@@ -3627,8 +3626,8 @@ the orginal document -->
    <p>
    Since both origin servers and caches will compare two validators to
    decide if they represent the same or different entities, one normally
-   would expect that if the entity (the entity-body or any entity-
-   headers) changes in any way, then the associated validator would
+   would expect that if the entity (the entity-body or any entity-headers)
+   changes in any way, then the associated validator would
    change as well. If this is true, then we call this validator a
    "strong validator."
    </p>
@@ -3744,8 +3743,8 @@ the orginal document -->
    <p>
       <ul>
         <li>
-        The validator is about to be used by a client in an If-
-        Modified-Since or If-Unmodified-Since header, because the client
+        The validator is about to be used by a client in an If-Modified-Since
+        or If-Unmodified-Since header, because the client
         has a cache entry for the associated entity, and
         <li>
 
@@ -3788,9 +3787,9 @@ the orginal document -->
    This method relies on the fact that if two different responses were
    sent by the origin server during the same second, but both had the
    same Last-Modified time, then at least one of those responses would
-   have a Date value equal to its Last-Modified time. The arbitrary 60-
-   second limit guards against the possibility that the Date and Last-
-   Modified values are generated from different clocks, or at somewhat
+   have a Date value equal to its Last-Modified time. The arbitrary 60-second
+   limit guards against the possibility that the Date and Last-Modified
+   values are generated from different clocks, or at somewhat
    different times during the preparation of the response. An
    implementation MAY use a value larger than 60 seconds, if it is
    believed that 60 seconds is too short.
@@ -3810,8 +3809,8 @@ the orginal document -->
    </p>
 
    <p>
-   These rules allow HTTP/1.1 caches and clients to safely perform sub-
-   range retrievals on values that have been obtained from HTTP/1.0
+   These rules allow HTTP/1.1 caches and clients to safely perform sub-range
+   retrievals on values that have been obtained from HTTP/1.0
    servers.
    </p>
 
@@ -3879,8 +3878,8 @@ the orginal document -->
       <ul>
         <li>
         If an entity tag has been provided by the origin server, MUST
-        use that entity tag in any cache-conditional request (using If-
-        Match or If-None-Match).
+        use that entity tag in any cache-conditional request (using If-Match
+        or If-None-Match).
         </li>
 
         <li>
@@ -4001,8 +4000,8 @@ the orginal document -->
    and 307) MUST NOT be returned in a reply to a subsequent request
    unless there are cache-control directives or another header(s) that
    explicitly allow it. For example, these include the following: an
-   Expires header (<a class="section" href="#14.21">section 14.21</a>); a "max-age", "s-maxage",  "must-
-   revalidate", "proxy-revalidate", "public" or "private" cache-control
+   Expires header (<a class="section" href="#14.21">section 14.21</a>); a "max-age", "s-maxage",  "must-revalidate",
+   "proxy-revalidate", "public" or "private" cache-control
    directive (<a class="section" href="#14.9">section 14.9</a>).
    </p>
 
@@ -4186,8 +4185,8 @@ the orginal document -->
    </p>
 
    <p>
-   If the status code is 304 (Not Modified), the cache uses the entity-
-   body stored in the cache entry as the entity-body of this outgoing
+   If the status code is 304 (Not Modified), the cache uses the entity-body
+   stored in the cache entry as the entity-body of this outgoing
    response. If the status code is 206 (Partial Content) and the ETag or
    Last-Modified headers match exactly, the cache MAY combine the
    contents stored in the cache entry with the new contents received in
@@ -4224,8 +4223,8 @@ the orginal document -->
    Unless the cache decides to remove the cache entry, it MUST also
    replace the end-to-end headers stored with the cache entry with
    corresponding headers received in the incoming response, except for
-   Warning headers as described immediately above. If a header field-
-   name in the incoming response matches more than one header in the
+   Warning headers as described immediately above. If a header field-name
+   in the incoming response matches more than one header in the
    cache entry, all such old headers MUST be replaced.
    </p>
 
@@ -4239,8 +4238,8 @@ the orginal document -->
       <p class="note">
       Note: this rule allows an origin server to use a 304 (Not
       Modified) or a 206 (Partial Content) response to update any header
-      associated with a previous response for the same entity or sub-
-      ranges thereof, although it might not always be meaningful or
+      associated with a previous response for the same entity or sub-ranges
+      thereof, although it might not always be meaningful or
       correct to do so. This rule does not allow an origin server to use
       a 304 (Not Modified) or a 206 (Partial Content) response to
       entirely delete a header that it had provided with a previous
@@ -4249,8 +4248,8 @@ the orginal document -->
 
 <h4 id+"13.5.4">13.5.4 Combining Byte Ranges</h4>
    <p>
-   A response might transfer only a subrange of the bytes of an entity-
-   body, either because the request included one or more Range
+   A response might transfer only a subrange of the bytes of an entity-body,
+   either because the request included one or more Range
    specifications, or because a connection was broken prematurely. After
    several such transfers, a cache might have received several ranges of
    the same entity-body.
@@ -4358,8 +4357,9 @@ the orginal document -->
 
    <p>
    If a cache receives a successful response whose Content-Location
-   field matches that of an existing cache entry for the same Request-
-   ]URI, whose entity-tag differs from that of the existing entry, and
+   field matches that of an existing cache entry for the same Request-URI,
+   <!-- TODO report spurious “]” before “URI”?  It is in the .txt file -->
+   whose entity-tag differs from that of the existing entry, and
    whose Date is more recent than that of the existing entry, the
    existing entry SHOULD NOT be returned in response to future requests
    and SHOULD be deleted from the cache.
@@ -4423,8 +4423,8 @@ the orginal document -->
 <h3="13.10">13.10 Invalidation After Updates or Deletions</h3>
    <p>
    The effect of certain methods performed on a resource at the origin
-   server might cause one or more existing cache entries to become non-
-   transparently invalid. That is, although they might continue to be
+   server might cause one or more existing cache entries to become non-transparently
+   invalid. That is, although they might continue to be
    "fresh," they do not accurately reflect what the origin server would
    return for a new request on that resource.
    </p>
@@ -4714,8 +4714,8 @@ the orginal document -->
    <p>
    The Accept-Charset request-header field can be used to indicate what
    character sets are acceptable for the response. This field allows
-   clients capable of understanding more comprehensive or special-
-   purpose character sets to signal that capability to a server which is
+   clients capable of understanding more comprehensive or special-purpose
+   character sets to signal that capability to a server which is
    capable of representing documents in those character sets.
    </p>
 
@@ -4895,9 +4895,9 @@ the orginal document -->
 
    <p>
    The language quality factor assigned to a language-tag by the
-   Accept-Language field is the quality value of the longest language-
-   range in the field that matches the language-tag. If no language-
-   range in the field matches the tag, the language quality factor
+   Accept-Language field is the quality value of the longest language-range
+   in the field that matches the language-tag. If no language-range
+   in the field matches the tag, the language quality factor
    assigned is 0. If no Accept-Language header is present in the
    request, the server SHOULD assume that all languages are equally
    acceptable. If an Accept-Language header is present, then all
@@ -5080,8 +5080,8 @@ the orginal document -->
          passed) a proxy cache MUST first revalidate it with the origin
          server, using the request-headers from the new request to allow
          the origin server to authenticate the new request. (This is the
-         defined behavior for s-maxage.) If the response includes "s-
-         maxage=0", the proxy MUST always revalidate it before re-using
+         defined behavior for s-maxage.) If the response includes "s-maxage=0",
+         the proxy MUST always revalidate it before re-using
          it.
          </li>
 
@@ -5121,8 +5121,8 @@ the orginal document -->
    Cache directives MUST be passed through by a proxy or gateway
    application, regardless of their significance to that application,
    since the directives might be applicable to all recipients along the
-   request/response chain. It is not possible to specify a cache-
-   directive for a specific cache.
+   request/response chain. It is not possible to specify a cache-directive
+   for a specific cache.
    </p>
 
     <pre>
@@ -5215,8 +5215,8 @@ the orginal document -->
    <dt>public</dt>
       <dd>
       Indicates that the response MAY be cached by any cache, even if it
-      would normally be non-cacheable or cacheable only within a non-
-      shared cache. (See also Authorization, <a class="section" href="#14.8">section 14.8</a>, for
+      would normally be non-cacheable or cacheable only within a non-shared
+      cache. (See also Authorization, <a class="section" href="#14.8">section 14.8</a>, for
       additional details.)
       </dd>
 
@@ -5279,8 +5279,8 @@ the orginal document -->
       request. If sent in a request, a cache MUST NOT store any part of
       either this request or any response to it. If sent in a response,
       a cache MUST NOT store any part of either this response or the
-      request that elicited it. This directive applies to both non-
-      shared and shared caches. "MUST NOT store" in this context means
+      request that elicited it. This directive applies to both non-shared
+      and shared caches. "MUST NOT store" in this context means
       that the cache MUST NOT intentionally store the information in
       non-volatile storage, and MUST make a best-effort attempt to
       remove the information from volatile storage as promptly as
@@ -5360,8 +5360,8 @@ the orginal document -->
        also implies the semantics of the proxy-revalidate directive (see
        <a class="section" href="#14.9.4">section 14.9.4</a>), i.e., that the shared cache must not use the
        entry after it becomes stale to respond to a subsequent request
-       without first revalidating it with the origin server. The s-
-       maxage directive is always ignored by a private cache.
+       without first revalidating it with the origin server. The s-maxage
+       directive is always ignored by a private cache.
        </dd>
    </dl>
 
@@ -5384,8 +5384,8 @@ the orginal document -->
    <dt>max-age</dt>
       <dd>
       Indicates that the client is willing to accept a response whose
-      age is no greater than the specified time in seconds. Unless max-
-      stale directive is also included, the client is not willing to
+      age is no greater than the specified time in seconds. Unless max-stale
+      directive is also included, the client is not willing to
       accept a stale response.
       </dd>
 
@@ -5450,8 +5450,8 @@ the orginal document -->
    </p>
 
    <p>
-   The client can specify these three kinds of action using Cache-
-   Control request directives:
+   The client can specify these three kinds of action using Cache-Control
+   request directives:
    </p>
 
    <dl>
@@ -5534,8 +5534,8 @@ the orginal document -->
       <dd>
       <p>
       Because a cache MAY be configured to ignore a server's specified
-      expiration time, and because a client request MAY include a max-
-      stale directive (which has a similar effect), the protocol also
+      expiration time, and because a client request MAY include a max-stale
+      directive (which has a similar effect), the protocol also
       includes a mechanism for the origin server to require revalidation
       of a cache entry on any subsequent use. When the must-revalidate
       directive is present in a response received by a cache, that cache
@@ -5574,8 +5574,8 @@ the orginal document -->
 
    <dt>proxy-revalidate</dt>
       <dd>
-      The proxy-revalidate directive has the same meaning as the must-
-      revalidate directive, except that it does not apply to non-shared
+      The proxy-revalidate directive has the same meaning as the must-revalidate
+      directive, except that it does not apply to non-shared
       user agent caches. It can be used on a response to an
       authenticated request to permit the user's cache to store and
       later return the response without needing to revalidate it (since
@@ -5593,8 +5593,8 @@ the orginal document -->
       <dd>
       <p>
       Implementors of intermediate caches (proxies) have found it useful
-      to convert the media type of certain entity bodies. A non-
-      transparent proxy might, for example, convert between image
+      to convert the media type of certain entity bodies. A non-transparent
+      proxy might, for example, convert between image
       formats in order to save cache space or to reduce the amount of
       traffic on a slow link.
       </p>
@@ -5909,16 +5909,16 @@ the orginal document -->
    The Content-Location value is not a replacement for the original
    requested URI; it is only a statement of the location of the resource
    corresponding to this particular entity at the time of the request.
-   Future requests MAY specify the Content-Location URI as the request-
-   URI if the desire is to identify the source of that particular
+   Future requests MAY specify the Content-Location URI as the request-URI
+   if the desire is to identify the source of that particular
    entity.
    </p>
 
    <p>
    A cache cannot assume that an entity with a Content-Location
    different from the URI used to retrieve it can be used to respond to
-   later requests on that Content-Location URI. However, the Content-
-   Location can be used to differentiate between multiple entities
+   later requests on that Content-Location URI. However, the Content-Location
+   can be used to differentiate between multiple entities
    retrieved from a single requested resource, as described in section
    13.6.
    </p>
@@ -5953,8 +5953,8 @@ the orginal document -->
    client to function as an integrity check of the entity-body. Only
    origin servers or clients MAY generate the Content-MD5 header field;
    proxies and gateways MUST NOT generate it, as this would defeat its
-   value as an end-to-end integrity check. Any recipient of the entity-
-   body, including gateways and proxies, MAY check that the digest value
+   value as an end-to-end integrity check. Any recipient of the entity-body,
+   including gateways and proxies, MAY check that the digest value
    in this header field matches that of the entity-body as received.
    </p>
 
@@ -5983,8 +5983,8 @@ the orginal document -->
    There are several consequences of this. The entity-body for composite
    types MAY contain many body-parts, each with its own MIME and HTTP
    headers (including Content-MD5, Content-Transfer-Encoding, and
-   Content-Encoding headers). If a body-part has a Content-Transfer-
-   Encoding or Content-Encoding header, it is assumed that the content
+   Content-Encoding headers). If a body-part has a Content-Transfer-Encoding
+   or Content-Encoding header, it is assumed that the content
    of the body-part has had the encoding applied, and the body-part is
    included in the Content-MD5 digest as is -- i.e., after the
    application. The Transfer-Encoding header field is not allowed within
@@ -6040,27 +6040,27 @@ the orginal document -->
    </p>
 
    <p>
-   Unlike byte-ranges-specifier values (see <a class="section" href="#14.35.1">section 14.35.1</a>), a byte-
-   range-resp-spec MUST only specify one range, and MUST contain
+   Unlike byte-ranges-specifier values (see <a class="section" href="#14.35.1">section 14.35.1</a>), a byte-range-resp-spec
+   MUST only specify one range, and MUST contain
    absolute byte positions for both the first and last byte of the
    range.
    </p>
 
    <p>
-   A byte-content-range-spec with a byte-range-resp-spec whose last-
-   byte-pos value is less than its first-byte-pos value, or whose
+   A byte-content-range-spec with a byte-range-resp-spec whose last-byte-pos
+   value is less than its first-byte-pos value, or whose
    instance-length value is less than or equal to its last-byte-pos
-   value, is invalid. The recipient of an invalid byte-content-range-
-   spec MUST ignore it and any content transferred along with it.
+   value, is invalid. The recipient of an invalid byte-content-range-spec
+   MUST ignore it and any content transferred along with it.
    </p>
 
    <p>
    A server sending a response with status code 416 (Requested range not
-   satisfiable) SHOULD include a Content-Range field with a byte-range-
-   resp-spec of "*". The instance-length specifies the current length of
+   satisfiable) SHOULD include a Content-Range field with a byte-range-resp-spec
+   of "*". The instance-length specifies the current length of
    the selected resource. A response with status code 206 (Partial
-   Content) MUST NOT include a Content-Range field with a byte-range-
-   resp-spec of "*".
+   Content) MUST NOT include a Content-Range field with a byte-range-resp-spec
+   of "*".
    </p>
 
    <p>
@@ -6142,9 +6142,9 @@ the orginal document -->
    </p>
 
    <p>
-   If the server receives a request (other than one including an If-
-   Range request-header field) with an unsatisfiable Range request-
-   header field (that is, all of whose byte-range-spec values have a
+   If the server receives a request (other than one including an If-Range
+   request-header field) with an unsatisfiable Range request-header
+   field (that is, all of whose byte-range-spec values have a
    first-byte-pos value greater than the current length of the selected
    resource), it SHOULD return a response code of 416 (Requested range
    not satisfiable) (<a class="section" href="#10.4.17">section 10.4.17</a>).
@@ -6260,8 +6260,8 @@ the orginal document -->
 <h4 id="14.8.1">14.18.1 Clockless Origin Server Operation</h4>
    <p>
    Some origin server implementations might not have a clock available.
-   An origin server without a clock MUST NOT assign Expires or Last-
-   Modified values to a response, unless these values were associated
+   An origin server without a clock MUST NOT assign Expires or Last-Modified
+   values to a response, unless these values were associated
    with the resource by a system or user with a reliable clock. It MAY
    assign an Expires value that is known, at or before server
    configuration time, to be in the past (this allows "pre-expiration"
@@ -6381,8 +6381,8 @@ the orginal document -->
       </pre>
 
       <p class="note">
-      Note: if a response includes a Cache-Control field with the max-
-      age directive (see <a class="section" href="#14.9.3">section 14.9.3</a>), that directive overrides the
+      Note: if a response includes a Cache-Control field with the max-age
+      directive (see <a class="section" href="#14.9.3">section 14.9.3</a>), that directive overrides the
       Expires field.
       </p>
 
@@ -6624,8 +6624,8 @@ the orginal document -->
          </li>
 
          <li>
-         If the variant has not been modified since a valid If-
-         Modified-Since date, the server SHOULD return a 304 (Not
+         If the variant has not been modified since a valid If-Modified-Since
+         date, the server SHOULD return a 304 (Not
          Modified) response.
          </li>
       </ol>
@@ -6636,8 +6636,8 @@ the orginal document -->
    </p>
 
       <p class="note">
-      Note: The Range request-header field modifies the meaning of If-
-      Modified-Since; see <a class="section" href="#14.35">section 14.35</a> for full details.
+      Note: The Range request-header field modifies the meaning of If-Modified-Since;
+      see <a class="section" href="#14.35">section 14.35</a> for full details.
       </p>
 
       <p class="note">
@@ -6649,10 +6649,10 @@ the orginal document -->
       Note: When handling an If-Modified-Since header field, some
       servers will use an exact date comparison function, rather than a
       less-than function, for deciding whether to send a 304 (Not
-      Modified) response. To get best results when sending an If-
-      Modified-Since header field for cache validation, clients are
-      advised to use the exact date string received in a previous Last-
-      Modified header field whenever possible.
+      Modified) response. To get best results when sending an If-Modified-Since
+      header field for cache validation, clients are
+      advised to use the exact date string received in a previous Last-Modified
+      header field whenever possible.
       </p>
 
       <p class="note">
@@ -6665,8 +6665,8 @@ the orginal document -->
       server. This includes the possibility of race conditions if the
       document has changed between the time it was first requested and
       the If-Modified-Since date of a subsequent request, and the
-      possibility of clock-skew-related problems if the If-Modified-
-      Since date is derived from the client's clock without correction
+      possibility of clock-skew-related problems if the If-Modified-Since
+      date is derived from the client's clock without correction
       to the server's clock. Corrections for different time bases
       between client and server are at best approximate due to network
       latency.
@@ -6709,8 +6709,8 @@ the orginal document -->
    so because the resource's modification date fails to match that
    supplied in an If-Modified-Since header field in the request.
    Instead, if the request method was GET or HEAD, the server SHOULD
-   respond with a 304 (Not Modified) response, including the cache-
-   related header fields (particularly ETag) of one of the entities that
+   respond with a 304 (Not Modified) response, including the cache-related
+   header fields (particularly ETag) of one of the entities that
    matched. For all other request methods, the server MUST respond with
    a status of 412 (Precondition Failed).
    </p>
@@ -6787,8 +6787,8 @@ the orginal document -->
         </pre>
 
    <p>
-   If the client has no entity tag for an entity, but does have a Last-
-   Modified date, it MAY use that date in an If-Range header. (The
+   If the client has no entity tag for an entity, but does have a Last-Modified
+   date, it MAY use that date in an If-Range header. (The
    server can distinguish between a valid HTTP-date and any form of
    entity-tag by examining no more than two characters.) The If-Range
    header SHOULD only be used together with a Range header, and MUST be
@@ -6964,8 +6964,8 @@ the orginal document -->
 
 <h3 id="14.32">14.32 Pragma</h3>
    <p>
-   The Pragma general-header field is used to include implementation-
-   specific directives that might apply to any recipient along the
+   The Pragma general-header field is used to include implementation-specific
+   directives that might apply to any recipient along the
    request/response chain. All pragma directives specify optional
    behavior from the viewpoint of the protocol; however, some systems
    MAY require that behavior be consistent with the directives.
@@ -7048,8 +7048,8 @@ the orginal document -->
    The HTTP access authentication process is described in "HTTP
    Authentication: Basic and Digest Access Authentication" <a class="ref" href="#ref-43">[43]</a> . Unlike
    Authorization, the Proxy-Authorization header field applies only to
-   the next outbound proxy that demanded authentication using the Proxy-
-   Authenticate field. When multiple proxies are used in a chain, the
+   the next outbound proxy that demanded authentication using the Proxy-Authenticate
+   field. When multiple proxies are used in a chain, the
    </p>
 
    <p>
@@ -7066,8 +7066,8 @@ the orginal document -->
    <p>
    Since all HTTP entities are represented in HTTP messages as sequences
    of bytes, the concept of a byte range is meaningful for any HTTP
-   entity. (However, not all clients and servers need to support byte-
-   range operations.)
+   entity. (However, not all clients and servers need to support byte-range
+   operations.)
    </p>
 
    <p>
@@ -7098,18 +7098,17 @@ the orginal document -->
 
    <p>
    If the last-byte-pos value is present, it MUST be greater than or
-   equal to the first-byte-pos in that byte-range-spec, or the byte-
-   range-spec is syntactically invalid. The recipient of a byte-range-
-   set that includes one or more syntactically invalid byte-range-spec
-   values MUST ignore the header field that includes that byte-range-
-   set.
+   equal to the first-byte-pos in that byte-range-spec, or the byte-range-spec
+   is syntactically invalid. The recipient of a byte-range-set
+   that includes one or more syntactically invalid byte-range-spec
+   values MUST ignore the header field that includes that byte-range-set.
    </p>
 
    <p>
    If the last-byte-pos value is absent, or if the value is greater than
    or equal to the current length of the entity-body, last-byte-pos is
-   taken to be equal to one less than the current length of the entity-
-   body in bytes.
+   taken to be equal to one less than the current length of the entity-body
+   in bytes.
    </p>
 
    <p>
@@ -7131,10 +7130,10 @@ the orginal document -->
    </p>
 
    <p>
-   If a syntactically valid byte-range-set includes at least one byte-
-   range-spec whose first-byte-pos is less than the current length of
-   the entity-body, or at least one suffix-byte-range-spec with a non-
-   zero suffix-length, then the byte-range-set is satisfiable.
+   If a syntactically valid byte-range-set includes at least one byte-range-spec
+   whose first-byte-pos is less than the current length of
+   the entity-body, or at least one suffix-byte-range-spec with a non-zero
+   suffix-length, then the byte-range-set is satisfiable.
    Otherwise, the byte-range-set is unsatisfiable. If the byte-range-set
    is unsatisfiable, the server SHOULD return a response with a status
    of 416 (Requested range not satisfiable). Otherwise, the server
@@ -7149,8 +7148,7 @@ the orginal document -->
 
       <ul>
         <li>
-        The first 500 bytes (byte offsets 0-499, inclusive):  bytes=0-
-        499
+        The first 500 bytes (byte offsets 0-499, inclusive):  bytes=0-499
         </li>
 
         <li>
@@ -7395,8 +7393,8 @@ the orginal document -->
          </li>
 
          <li>
-         If the transfer-coding being tested is one of the transfer-
-         codings listed in the TE field, then it is acceptable unless it
+         If the transfer-coding being tested is one of the transfer-codings
+         listed in the TE field, then it is acceptable unless it
          is accompanied by a qvalue of 0. (As defined in <a class="section" href="#3.9">section 3.9</a>, a
          qvalue of 0 means "not acceptable.")
          </li>
@@ -7481,15 +7479,15 @@ the orginal document -->
      </pre>
 
    <p>
-   If multiple encodings have been applied to an entity, the transfer-
-   codings MUST be listed in the order in which they were applied.
+   If multiple encodings have been applied to an entity, the transfer-codings
+   MUST be listed in the order in which they were applied.
    Additional information about the encoding parameters MAY be provided
    by other entity-header fields not defined by this specification.
    </p>
 
    <p>
-   Many older HTTP/1.0 applications do not understand the Transfer-
-   Encoding header.
+   Many older HTTP/1.0 applications do not understand the Transfer-Encoding
+   header.
    </p>
 
 <h3 id="14.42">14.42 Upgrade</h3>
@@ -7815,8 +7813,8 @@ the orginal document -->
 
         <li>
         Warnings in the user's preferred character set take priority
-        over warnings in other character sets but with identical warn-
-        codes and warn-agents.
+        over warnings in other character sets but with identical warn-codes
+        and warn-agents.
         </li>
       </ul>
 
@@ -7917,8 +7915,8 @@ the orginal document -->
    <p>
    The HTTP access authentication process is described in "HTTP
    Authentication: Basic and Digest Access Authentication" <a class="ref" href="#ref-43">[43]</a>. User
-   agents are advised to take special care in parsing the WWW-
-   Authenticate field value as it might contain more than one challenge,
+   agents are advised to take special care in parsing the WWW-Authenticate
+   field value as it might contain more than one challenge,
    or if more than one WWW-Authenticate header field is provided, the
    contents of a challenge itself can contain a comma-separated list of
    authentication parameters.
@@ -8148,8 +8146,8 @@ the orginal document -->
 <h3 id="15.4">15.4 Location Headers and Spoofing</h3>
    <p>
    If a single server supports multiple organizations that do not trust
-   one another, then it MUST check the values of Location and Content-
-   Location headers in responses that are generated under control of
+   one another, then it MUST check the values of Location and Content-Location
+   headers in responses that are generated under control of
    said organizations to make sure that they do not attempt to
    invalidate resources over which they have no authority.
    </p>
@@ -8190,8 +8188,8 @@ the orginal document -->
       </ul>
 
    <p>
-   This is currently under separate study. There are a number of work-
-   arounds to parts of this problem, and we encourage the use of
+   This is currently under separate study. There are a number of work-arounds
+   to parts of this problem, and we encourage the use of
    password protection in screen savers, idle time-outs, and other
    methods which mitigate the security problems inherent in this
    problem. In particular, user agents which cache credentials are
@@ -9111,8 +9109,8 @@ the orginal document -->
    </p>
 
    <p>
-   If this header is used in a response with the application/octet-
-   stream content-type, the implied suggestion is that the user agent
+   If this header is used in a response with the application/octet-stream
+   content-type, the implied suggestion is that the user agent
    should not display the response, but directly enter a `save response
    as...' dialog.
    </p>
@@ -9181,8 +9179,8 @@ the orginal document -->
 
 <h5 id="19.6.1.1">19.6.1.1 Changes to Simplify Multi-homed Web Servers and Conserve IP Addresses</h5>
    <p>
-   The requirements that clients and servers support the Host request-
-   header, report an error if the Host request-header (<a class="section" href="#14.23">section 14.23</a>) is
+   The requirements that clients and servers support the Host request-header,
+   report an error if the Host request-header (<a class="section" href="#14.23">section 14.23</a>) is
    missing from an HTTP/1.1 request, and accept absolute URIs (section
    5.1.2) are among the most important changes defined by this
    specification.
@@ -9415,8 +9413,8 @@ the orginal document -->
 
    <p>
    Transfer-coding had significant problems, particularly with
-   interactions with chunked encoding. The solution is that transfer-
-   codings become as full fledged as content-codings. This involves
+   interactions with chunked encoding. The solution is that transfer-codings
+   become as full fledged as content-codings. This involves
    adding an IANA registry for transfer-codings (separate from content
    codings), a new header field (TE) and enabling trailer headers in the
    future. Transfer encoding is a major performance benefit, so it was
