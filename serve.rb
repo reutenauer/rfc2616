@@ -29,6 +29,8 @@ routes = {
 # Paths for “roots”.  Look at that name, ha ha, I’m being funny!
 roots = ['/']
 
+old_roots = ['/index.html', '/rfc2616.html']
+
 routes.each do |key, route|
   next if key == :root
   path = route[:path]
@@ -43,6 +45,12 @@ end
 roots.each do |root|
   get(root) do
     dump(File.join('static', routes[:root][:file]))
+  end
+end
+
+old_roots.each do |old_root|
+  get(old_root) do
+    [301, { Location: "/" }, nil]
   end
 end
 
