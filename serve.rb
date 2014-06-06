@@ -21,19 +21,16 @@ class MyStream
 end
 
 routes = {
-  :html => { :path => '/rfc2616.html', :file => 'rfc2616.html', :type => "text/html; charset=UTF-8" },
+  :root => { :path => '/rfc2616.html', :file => 'rfc2616.html', :type => "text/html; charset=UTF-8" },
   :css => { :path => '/style.css', :file => 'style.css', :type => "text/css" },
   :javascript => { :path => '/script.js', :file => 'script.js', :type => "text/javascript" },
-
-  :root => :html
 }
 
 # Paths for “roots”.  Look at that name, ha ha, I’m being funny!
-roots = ['/', '/index.html']
+roots = ['/']
 
 routes.each do |key, route|
   next if key == :root
-
   path = route[:path]
   file = route[:file]
   content_type = route[:type]
@@ -45,7 +42,7 @@ end
 
 roots.each do |root|
   get(root) do
-    dump(File.join('static', routes[routes[:root]][:file]))
+    dump(File.join('static', routes[:root][:file]))
   end
 end
 
